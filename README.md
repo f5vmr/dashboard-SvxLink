@@ -1,2 +1,2 @@
-# hotspot.dashboard.pl
+# hotspot.dashboard.pi
 Hotspot Dashboard PI
