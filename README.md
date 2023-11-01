@@ -7,11 +7,11 @@ HotSpot dashboard repository inspired by pi star dashboard
 ```
 cd /var/www
 cp -R html html.$(date +"%Y%m%dT%H%M%s")
-wget https://github.com/FM-POLAND/hs_dashboard_pi/archive/refs/heads/main.zip
+wget https://github.com/SP0DZ/hotspot.dashboard.pi/archive/refs/heads/main.zip
 unzip main.zip
 rm main.zip
 rm -R html
-mv hs_dashboard_pi-main html
+mv hotspot.dashboard.pi-main html
 chown svxlink -R html
 ```
 
