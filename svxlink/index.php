@@ -147,9 +147,7 @@ if (isset($_POST['btnSave']))
         $svxconfig['GLOBAL']['RF_MODULE'] = $_POST['inGlobalRf'];
 
 	$svxconfig['ReflectorLogic']['DEFAULT_LANG'] = $_POST['inReflectorDefaultLang'];
-	$svxconfig['ReflectorLogic']['PORT'] = $_POST['inReflectorPort'];
 	$svxconfig['ReflectorLogic']['API'] = $_POST['inReflectorApi'];
-        $svxconfig['ReflectorLogic']['HOST'] = $_POST['inReflectorServer'];
         $svxconfig['ReflectorLogic']['DEFAULT_TG'] = $_POST['inDefaultTg'];
         $svxconfig['ReflectorLogic']['MONITOR_TGS'] = $_POST['inMonitorTgs'];
         $svxconfig['ReflectorLogic']['AUTH_KEY'] = $_POST['inPassword'];
@@ -193,9 +191,6 @@ if (isset($_POST['btnSave']))
 	$svxconfig['Macros']['9'] = $_POST['inMD9'];
 	
 	$svxconfig['Rx1']['PEAK_METER'] = $_POST['inRx1PeakMeter'];
-        //$svxconfig['ReflectorLogic']['PORT'] = $_POST['inReflectorPort'];
-        //$svxconfig['ReflectorLogic']['PORT'] = $_POST['inReflectorPort'];
-        //$svxconfig['ReflectorLogic']['PORT'] = $_POST['inReflectorPort'];
         $ini = build_ini_string($svxconfig);
 
         //file_put_contents("/var/www/html/test.ini",$ini,FILE_USE_INCLUDE_PAT);
@@ -249,9 +244,7 @@ if (isset($_POST['btnSave']))
 	
 	$inReflectorDefaultLang = $svxconfig['ReflectorLogic']['DEFAULT_LANG'];
 	$inCallsign = $svxconfig['ReflectorLogic']['CALLSIGN'];
-	$inReflectorServer =$svxconfig['ReflectorLogic']['HOST'];
 	$inReflectorApi =$svxconfig['ReflectorLogic']['API'];
-	$inReflectorPort =$svxconfig['ReflectorLogic']['PORT'];
 	$inDefaultTg =$svxconfig['ReflectorLogic']['DEFAULT_TG'];
 	$inMonitorTgs =$svxconfig['ReflectorLogic']['MONITOR_TGS'];
 	$inPassword =$svxconfig['ReflectorLogic']['AUTH_KEY'];
@@ -414,14 +407,6 @@ $conns = null;
         <tr style="border: none;"> 
         <td style="border: none;">Reflector TgUri</td>
         <td style="border: none;"><input type="text" name="inReflectorTgUri" style="width:98%" value="<?php echo $inReflectorTgUri;?>">
-        </td></tr>
-        <tr style="border: none;"> 
-        <td style="border: none;"><s>Reflector Server</s></td>
-        <td style="border: none;"><input type="text" name="inReflectorServer" style="width:98%" value="<?php echo $inReflectorServer;?>">
-        </td></tr>
-        <tr style="border: none;"> 
-        <td style="border: none;"><s>Reflector Port</s></td>
-        <td style="border: none;"><input type="text" name="inReflectorPort" style="width:98%" value="<?php echo $inReflectorPort;?>">
         </td></tr>
 </table>
 
