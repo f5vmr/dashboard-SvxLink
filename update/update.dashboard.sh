@@ -11,7 +11,7 @@ cd src
 echo "--- Dashboard Pi download --"
 wget $zipball -O dashboard.zip
 unzip dashboard.zip
-mv FM-POLAND-hs_dashboard_pi* html
+mv SP0DZ-hotspot.dashboard.pi* html
 
 echo "--- Dashboard Pi - backup ---"
 cp -R /var/www/html    /var/www/html.$(date +"%Y%m%dT%H%M%s")
@@ -32,8 +32,8 @@ chown svxlink -R /var/www/html
 echo "--- Dashboard Pi version update & cleanup ---"
 echo $tagname > /opt/version.dashboard 
 
-
-#rm -R /opt/src
+cd /opt
+rm -R /opt/src
 echo "--- SVXlink service restart"
 sudo service svxlink restart
 
