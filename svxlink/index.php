@@ -157,6 +157,7 @@ if (isset($_POST['btnSave']))
         $svxconfig['ReflectorLogic']['HOSTS'] = $_POST['inHostsServer'];
         $svxconfig['ReflectorLogic']['HOST_PORT'] = $_POST['inHostPort'];
         $svxconfig['ReflectorLogic']['DNS_DOMAIN'] = $_POST['inDnsDomain'];
+        $svxconfig['ReflectorLogic']['OPUS_ENC_BITRATE'] = $_POST['inOpusEncBitrate'];
                 
 
         if ($isSimplex){
@@ -253,6 +254,7 @@ if (isset($_POST['btnSave']))
         $inHostPort =$svxconfig['ReflectorLogic']['HOST_PORT'];
         $inHostsServer =$svxconfig['ReflectorLogic']['HOSTS'];
         $inDnsDomain =$svxconfig['ReflectorLogic']['DNS_DOMAIN'];
+        $inOpusEncBitrate = $svxconfig['ReflectorLogic']['OPUS_ENC_BITRATE'];
                
 
         if ($isSimplex){ 
@@ -408,6 +410,11 @@ $conns = null;
         <td style="border: none;">Reflector TgUri</td>
         <td style="border: none;"><input type="text" name="inReflectorTgUri" style="width:98%" value="<?php echo $inReflectorTgUri;?>">
         </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">Opus Enc Bitrate</td>
+        <td style="border: none;"><input type="text" name="inOpusEncBitrate" style="width:98%" value="<?php echo $inOpusEncBitrate;?>">
+        </td></tr>
+
 </table>
 
 </td>

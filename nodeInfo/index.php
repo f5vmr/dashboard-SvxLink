@@ -135,12 +135,36 @@ if (fopen($nodeInfoFile,'r'))
 
 if (isset($_POST['btnSave']))
     {
-	$nodeInfo["Location"] = $_POST['inLocation']; $nodeInfo["Locator"] = $_POST['inLocator'];$nodeInfo["SysOp"] = $_POST['inSysOp'];
-	$nodeInfo["LAT"] = $_POST['inLAT']; $nodeInfo["LONG"] = $_POST['inLONG'];$nodeInfo["RXFREQ"] = $_POST['inRXFREQ'];
-	$nodeInfo["TXFREQ"] = $_POST['inTXFREQ']; $nodeInfo["Website"] = $_POST['inWebsite'];$nodeInfo["Mode"] = $_POST['inMode'];
-	$nodeInfo["Type"] = $_POST['inType']; $nodeInfo["Echolink"] = $_POST['inEcholink'];$nodeInfo["nodeLocation"] = $_POST['innodeLocation'];
-	$nodeInfo["Sysop"] = $_POST['inSysop']; $nodeInfo["Verbund"] = $_POST['inVerbund'];$nodeInfo["CTCSS"] = $_POST['inCTCSS'];
-	$nodeInfo["LinkedTo"] = $_POST['inLinkedTo'];$nodeInfo["DefaultTg"] = $_POST['inDefaultTg'];
+	$nodeInfo["Location"] = $_POST['inLocation'];
+    $nodeInfo["Locator"] = $_POST['inLocator'];
+    $nodeInfo["SysOp"] = $_POST['inSysOp'];
+	$nodeInfo["LAT"] = $_POST['inLAT'];
+    $nodeInfo["Lat"] = $_POST['inLat'];  
+    $nodeInfo["LONG"] = $_POST['inLONG'];
+    $nodeInfo["Long"] = $_POST['inLong'];
+    $nodeInfo["RXFREQ"] = $_POST['inRXFREQ'];
+    $nodeInfo["RxFreq"] = $_POST['inRxFreq'];
+	$nodeInfo["TXFREQ"] = $_POST['inTXFREQ']; 
+    $nodeInfo["TxFreq"] = $_POST['inTxFreq']; 
+    $nodeInfo["Website"] = $_POST['inWebsite'];
+    $nodeInfo["Mode"] = $_POST['inMode'];
+	$nodeInfo["Type"] = $_POST['inType']; 
+    $nodeInfo["Echolink"] = $_POST['inEcholink'];
+    $nodeInfo["nodeLocation"] = $_POST['innodeLocation'];
+    $nodeInfo["Sysop"] = $_POST['inSysop']; 
+    $nodeInfo["Verbund"] = $_POST['inVerbund'];
+    $nodeInfo["CTCSS"] = $_POST['inCTCSS'];
+    $nodeInfo["Ctcss"] = $_POST['inCtcss'];
+	$nodeInfo["LinkedTo"] = $_POST['inLinkedTo'];
+    $nodeInfo["DefaultTg"] = $_POST['inDefaultTg'];
+    $nodeInfo["DefaultTG"] = $_POST['inDefaultTG'];
+    $nodeInfo["BuildBy"] = $_POST['inBuildBy'];
+    $nodeInfo["Device"] = $_POST['inDevice'];
+    $nodeInfo["DevicePower"] = $_POST['inDevicePower'];
+    $nodeInfo["Antenna"] = $_POST['inAntenna'];
+    $nodeInfo["AntennaHeightOverGround"] = $_POST['inAntennaHeightOverGround'];
+    $nodeInfo["AntennaDirection"] = $_POST['inAntennaDirection'];
+    $nodeInfo["AntennaGain"] = $_POST['inAntennaGain'];
 
 	$jsonNodeInfo = json_encode($nodeInfo);
 	file_put_contents("/var/www/html/nodeInfo/node_info.json", $jsonNodeInfo ,FILE_USE_INCLUDE_PATH);
@@ -162,13 +186,36 @@ if (isset($_POST['btnSave']))
 //  	$svxconfig = parse_ini_file($svxConfigFile,true,INI_SCANNER_RAW);
 //        $inCallsign = $svxconfig['ReflectorLogic']['CALLSIGN'];
 
-
-	$inLocation = $nodeInfo["Location"];$inLocator = $nodeInfo["Locator"]; $inSysOp = $nodeInfo["SysOp"];
-	$inLAT = $nodeInfo["LAT"];$inLONG = $nodeInfo["LONG"]; $inRXFREQ = $nodeInfo["RXFREQ"];
-	$inTXFREQ = $nodeInfo["TXFREQ"];$inWebsite = $nodeInfo["Website"]; $inMode = $nodeInfo["Mode"];
-	$inType = $nodeInfo["Type"];$inEcholink = $nodeInfo["Echolink"]; $innodeLocation = $nodeInfo["nodeLocation"];
-	$inSysop = $nodeInfo["Sysop"];$inVerbund = $nodeInfo["Verbund"]; $inCTCSS = $nodeInfo["CTCSS"];
-	$inLinkedTo = $nodeInfo["LinkedTo"];$inDefaultTg = $nodeInfo["DefaultTg"];
+	$inLocation = $nodeInfo["Location"];
+    $inLocator = $nodeInfo["Locator"]; 
+    $inSysOp = $nodeInfo["SysOp"];
+	$inLAT = $nodeInfo["LAT"];
+    $inLat = $nodeInfo["Lat"];
+    $inLONG = $nodeInfo["LONG"];
+    $inLong = $nodeInfo["Long"];  
+    $inRXFREQ = $nodeInfo["RXFREQ"];
+    $inRxFreq = $nodeInfo["RxFreq"];
+	$inTXFREQ = $nodeInfo["TXFREQ"];
+    $inTxFreq = $nodeInfo["TxFreq"];
+    $inWebsite = $nodeInfo["Website"]; 
+    $inMode = $nodeInfo["Mode"];
+	$inType = $nodeInfo["Type"];
+    $inEcholink = $nodeInfo["Echolink"]; 
+    $innodeLocation = $nodeInfo["nodeLocation"];
+    $inSysop = $nodeInfo["Sysop"];
+    $inVerbund = $nodeInfo["Verbund"]; 
+    $inCTCSS = $nodeInfo["CTCSS"];
+    $inCtcss = $nodeInfo["Ctcss"];
+	$inLinkedTo = $nodeInfo["LinkedTo"];
+    $inDefaultTg = $nodeInfo["DefaultTg"];
+    $inDefaultTG = $nodeInfo["DefaultTG"];
+    $inBuildBy = $nodeInfo["BuildBy"];
+    $inDevice = $nodeInfo["Device"];
+    $inDevicePower = $nodeInfo["DevicePower"];
+    $inAntenna = $nodeInfo["Antenna"];
+    $inAntennaHeightOverGround = $nodeInfo["AntennaHeightOverGround"];
+    $inAntennaDirection = $nodeInfo["AntennaDirection"];
+    $inAntennaGain = $nodeInfo["AntennaGain"];
 
 ?>
 
@@ -194,6 +241,11 @@ if (isset($_POST['btnSave']))
         <input type="text" name="inLocation" style="width:98%" value="<?php echo $inLocation;?>">
         </td></tr>
         <tr style="border: none;"> 
+        <td style="border: none;"><s>Node Location</s></td>
+        <td style="border: none;">
+        <input  type="text" name="innodeLocation" style="width:98%" value="<?php echo $innodeLocation;?>">
+        </td></tr>
+        <tr style="border: none;"> 
         <td style="border: none;">Locator</td>
         <td style="border: none;">
         <input  type="text" name="inLocator" style="width:98%" value="<?php echo $inLocator;?>">
@@ -204,22 +256,48 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inSysOp" style="width:98%" value="<?php echo $inSysOp;?>">
         </td></tr>
         <tr style="border: none;"> 
+        <td style="border: none;"><s>Sysop</s></td>
+        <td style="border: none;">
+        <input  type="text" name="inSysop" style="width:98%" value="<?php echo $inSysop;?>">
+        </td></tr>
+        <tr style="border: none;"> 
         <td style="border: none;">Lat</td>
+        <td style="border: none;">
+        <input  type="text" name="inLat" style="width:98%" value="<?php echo $inLat;?>">
+        </td></tr>
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;"><s>LAT</s></td>
         <td style="border: none;">
         <input  type="text" name="inLAT" style="width:98%" value="<?php echo $inLAT;?>">
         </td></tr>
         <tr style="border: none;"> 
         <td style="border: none;">Long</td>
         <td style="border: none;">
+        <input  type="text" name="inLong" style="width:98%" value="<?php echo $inLong;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;"><s>LONG</s></td>
+        <td style="border: none;">
         <input  type="text" name="inLONG" style="width:98%" value="<?php echo $inLONG;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;">Rq Freq</td>
+        <td style="border: none;">RxFreq</td>
+        <td style="border: none;">
+        <input  type="text" name="inRxFreq" style="width:98%" value="<?php echo $inRxFreq;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;"><s>RXFREQ</s></td>
         <td style="border: none;">
         <input  type="text" name="inRXFREQ" style="width:98%" value="<?php echo $inRXFREQ;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;">Tx Freq</td>
+        <td style="border: none;">TxFreq</td>
+        <td style="border: none;">
+        <input  type="text" name="inTxFreq" style="width:98%" value="<?php echo $inTxFreq;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;"><s>TXFREQ</s></td>
         <td style="border: none;">
         <input  type="text" name="inTXFREQ" style="width:98%" value="<?php echo $inTXFREQ;?>">
         </td></tr>
@@ -239,24 +317,9 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inType" style="width:98%" value="<?php echo $inType;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;">EchoLink</td>
+        <td style="border: none;">Echolink</td>
         <td style="border: none;">
         <input  type="text" name="inEcholink" style="width:98%" value="<?php echo $inEcholink;?>">
-        </td></tr>
-        <tr style="border: none;"> 
-        <td style="border: none;">Node Location</td>
-        <td style="border: none;">
-        <input  type="text" name="innodeLocation" style="width:98%" value="<?php echo $innodeLocation;?>">
-        </td></tr>
-        <tr style="border: none;"> 
-        <td style="border: none;">Sysop</td>
-        <td style="border: none;">
-        <input  type="text" name="inSysop" style="width:98%" value="<?php echo $inSysop;?>">
-        </td></tr>
-        <tr style="border: none;"> 
-        <td style="border: none;">Verbund</td>
-        <td style="border: none;">
-        <input  type="text" name="inVerbund" style="width:98%" value="<?php echo $inVerbund;?>">
         </td></tr>
         <tr style="border: none;"> 
         <td style="border: none;">LinkedTo</td>
@@ -264,16 +327,66 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inLinkedTo" style="width:98%" value="<?php echo $inLinkedTo;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;">CTCSS</td>
+        <td style="border: none;"><s>Verbund</s></td>
+        <td style="border: none;">
+        <input  type="text" name="inVerbund" style="width:98%" value="<?php echo $inVerbund;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">Ctcss</td>
+        <td style="border: none;">
+        <input  type="text" name="inCtcss" style="width:98%" value="<?php echo $inCtcss;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;"><s>CTCSS</s></td>
         <td style="border: none;">
         <input  type="text" name="inCTCSS" style="width:98%" value="<?php echo $inCTCSS;?>">
         </td></tr>
-        </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;">DefaultTG</td>
+        <td style="border: none;">DefaultTg</td>
         <td style="border: none;">
         <input  type="text" name="inDefaultTg" style="width:98%" value="<?php echo $inDefaultTg;?>">
         </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;"><s>DefaultTG</s></td>
+        <td style="border: none;">
+        <input  type="text" name="inDefaultTG" style="width:98%" value="<?php echo $inDefaultTG;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">BuildBy</td>
+        <td style="border: none;">
+        <input  type="text" name="inBuildBy" style="width:98%" value="<?php echo $inBuildBy;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">Device</td>
+        <td style="border: none;">
+        <input  type="text" name="inDevice" style="width:98%" value="<?php echo $inDevice;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">DevicePower</td>
+        <td style="border: none;">
+        <input  type="text" name="inDevicePower" style="width:98%" value="<?php echo $inDevicePower;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">Antenna</td>
+        <td style="border: none;">
+        <input  type="text" name="inAntenna" style="width:98%" value="<?php echo $inAntenna;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">AntennaHeightOverGround</td>
+        <td style="border: none;">
+        <input  type="text" name="inAntennaHeightOverGround" style="width:98%" value="<?php echo $inAntennaHeightOverGround;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">AntennaDirection</td>
+        <td style="border: none;">
+        <input  type="text" name="inAntennaDirection" style="width:98%" value="<?php echo $inAntennaDirection;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">AntennaGain</td>
+        <td style="border: none;">
+        <input  type="text" name="inAntennaGain" style="width:98%" value="<?php echo $inAntennaGain;?>">
+        </td></tr>
+
 
     </table>
 </td>
