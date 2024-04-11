@@ -49,7 +49,7 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
                //$name=$tgdb_array[$tgnumber];
 
                if ( $name==""){ $name ="------";}
-               if ( $tgnumber>=1239900 and $tgnumber<= 1239999){ $name ="AUTO QSY";}
+               if ( $tgnumber>=26099900 and $tgnumber<= 26099999){ $name ="AUTO QSY";}
 		echo "<td style=\"font-weight:bold;color:#464646;\">&nbsp;<b>".$name."</b></td>";
 		echo"</tr>\n";
 		}
