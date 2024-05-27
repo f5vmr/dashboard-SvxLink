@@ -176,12 +176,15 @@ if (isset($_POST['btnRadio']))
 	$squelch = $_POST['squelch'];
 	$ctcss = $_POST['ctcss'];
 	$tail = $_POST['tail'];
+	$bw = $_POST['bw']; 
+	/* $bw = 0; */
+	
 
-        $command = "sa818 --port \"" .$port. "\" radio --frequency \"" .$freq. "\" --offset \"" .$offset. "\" --squelch \"" .$squelch. "\" --ctcss \"" .$ctcss. "\" --close-tail \"" .$tail. "\" 2>&1";
+        $command = "sa818 --port \"" .$port. "\" radio --bw \"" .$bw. "\"  --frequency \"" .$freq. "\" --offset \"" .$offset. "\" --squelch \"" .$squelch. "\" --ctcss \"" .$ctcss. "\" --close-tail \"" .$tail. "\" 2>&1";
         if (!$retval) exec($command,$screen,$retval);
 
 	if (!$retval) {
-                $RfData['port']=$port;$RfData['freq']=$freq;$RfData['offset']=$offset;$RfData['squelch']=$squelch;$RfData['ctcss']=$ctcss;$RfData['tail']=$tail;
+                $RfData['port']=$port;$RfData['freq']=$freq;$RfData['offset']=$offset;$RfData['squelch']=$squelch;$RfData['ctcss']=$ctcss;$RfData['tail']=$tail;$RfData['bw']=$bw;
                 $jsonRfData = json_encode($RfData);
                 file_put_contents("/var/www/html/rf/sa818.json", $jsonRfData ,FILE_USE_INCLUDE_PATH);
                 //archive the current config
@@ -244,7 +247,7 @@ if (isset($_POST['btnVol']))
 //load json
 
 $port = $RfData['port']; 
-$freq = $RfData['freq'];$offset=$RfData['offset'];$ctcss=$RfData['ctcss'];$tail=$RfData['tail'];$squelch=$RfData['squelch'];
+$freq = $RfData['freq'];$offset=$RfData['offset'];$ctcss=$RfData['ctcss'];$tail=$RfData['tail'];$squelch=$RfData['squelch'];$bw=$RfData['bw'];
 $fEmph = $RfData['fEmph'];$fLow=$RfData['fLow'];$fHigh=$RfData['fHigh'];
 $volume = $RfData['volume'];
 
@@ -259,6 +262,7 @@ if ($offset === "" || is_null($offset)) $offset = "0.0";
 if ($ctcss === "" || is_null($ctcss)) $ctcss = "77.0";
 if ($tail === "" || is_null($tail)) $tail = "yes";
 if ($squelch === "" || is_null($squelch)) $squelch = "5";
+if ($bw ==="" || is_null($bw)) $bw = "1";
 
 //filter
 if ($fEmph === "" || is_null($fEmph)) $fEmph = "no";
@@ -313,7 +317,8 @@ if ($volume === "" || is_null($volume)) $volume = "8";
         </tr>
 <tr>
 <Td>
-   	Freq: <input type "text" name="freq" style="width: 180px" value="<?php echo $freq;?>">
+   	Freq: <input type "text" name="freq" style="width: 120px" value="<?php echo $freq;?>">
+	Bw: <input type "text" name="bw" style="width: 50px" value="<?php echo $bw;?>">
 	Shift: <input type "text" name="offset" style="width: 50px" value="<?php echo $offset;?>"> <br>
    	Ctcss: <input type "text" name="ctcss" style="width: 50px" value="<?php echo $ctcss;?>">
 	Squelch: <input type "text" name="squelch" style="width: 50px" value="<?php echo $squelch;?>">
