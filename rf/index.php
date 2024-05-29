@@ -180,7 +180,7 @@ if (isset($_POST['btnRadio']))
 	/* $bw = 0; */
 	
 
-        $command = "sa818 --port \"" .$port. "\" radio --bw \"" .$bw. "\"  --frequency \"" .$freq. "\" --offset \"" .$offset. "\" --squelch \"" .$squelch. "\" --ctcss \"" .$ctcss. "\" --close-tail \"" .$tail. "\" 2>&1";
+        $command = "sa818 --port \"" .$port. "\" radio --bw \"" .$bw. "\"  --frequency \"" .$freq. "\" --offset \"" .$offset. "\" --squelch \"" .$squelch. "\" --ctcss \"" .$ctcss. "\" --tail \"" .$tail. "\" 2>&1";
         if (!$retval) exec($command,$screen,$retval);
 
 	if (!$retval) {
