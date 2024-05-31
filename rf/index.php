@@ -260,7 +260,7 @@ if ($port === "" || is_null($port)) $port = "/dev/ttyS1";
 if ($freq === "" || is_null($freq)) $freq = "433.5375";
 if ($offset === "" || is_null($offset)) $offset = "0.0";
 if ($ctcss === "" || is_null($ctcss)) $ctcss = "77.0";
-if ($tail === "" || is_null($tail)) $tail = "yes";
+if ($tail === "" || is_null($tail)) $tail = "open";
 if ($squelch === "" || is_null($squelch)) $squelch = "5";
 if ($bw ==="" || is_null($bw)) $bw = "1";
 
