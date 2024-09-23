@@ -158,6 +158,8 @@ if (isset($_POST['btnSave']))
         $svxconfig['ReflectorLogic']['HOST_PORT'] = $_POST['inHostPort'];
         $svxconfig['ReflectorLogic']['DNS_DOMAIN'] = $_POST['inDnsDomain'];
         $svxconfig['ReflectorLogic']['OPUS_ENC_BITRATE'] = $_POST['inOpusEncBitrate'];
+        $svxconfig['ReflectorLogic']['TYPE'] = $_POST['inRefLogicType'];
+
                 
 
         if ($isSimplex){
@@ -255,6 +257,7 @@ if (isset($_POST['btnSave']))
         $inHostsServer =$svxconfig['ReflectorLogic']['HOSTS'];
         $inDnsDomain =$svxconfig['ReflectorLogic']['DNS_DOMAIN'];
         $inOpusEncBitrate = $svxconfig['ReflectorLogic']['OPUS_ENC_BITRATE'];
+        $inRefLogicType = $svxconfig['ReflectorLogic']['TYPE'];
                
 
         if ($isSimplex){ 
@@ -368,6 +371,10 @@ $conns = null;
         <td style="border: none;">Default Language</td>
         <td style="border: none;">
         <input type="text" name="inReflectorDefaultLang" style="width:98%" value="<?php echo $inReflectorDefaultLang;?>">
+        </td></tr>
+        <tr style="border: none;"> 
+        <td style="border: none;">Ref. Logic Type</td>
+        <td style="border: none;"><input type="text" name="inRefLogicType" style="width:98%" value="<?php echo $inRefLogicType;?>">
         </td></tr>
         <tr style="border: none;"> 
         <td style="border: none;">FM Network</td>
