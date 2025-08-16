@@ -112,7 +112,7 @@ if (isset($_POST['btnLog']))
         //$sAconn = $_POST['sAconn'];
         //$password = $_POST['password'];
         //exec('nmcli dev wifi rescan');
-        $command = "tail -n 500 /var/log/svxlink |tac 2>&1";
+        $command = "tail -n 500 /var/log/svxlink.log |tac 2>&1";
         exec($command,$screen,$retval);
 }
 

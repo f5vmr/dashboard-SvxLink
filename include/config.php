@@ -25,10 +25,10 @@ define("FMNETWORK", $fmnetwork);
 define("URLSVXRAPI", $refApi);
 //
 // Empty address API do not show connected nodes to svxreflector 
-//define("URLSVXRAPI", "");
+define("URLSVXRAPI", "");
 //
 // Put url address to your svxreflector wihc offer information of status
-//define("URLSVXRAPI", "http://192.168.1.33:9999/status");
+define("URLSVXRAPI", "http://192.168.1.213:8181/status");
 //
 //
 // Orange Pi Zero LTS version requires CPU_TEMP_OFFSET value 30 
