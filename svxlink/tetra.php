@@ -47,7 +47,7 @@
         <td style="border: none;"><input type="text" name="inTetraMnc" style="width:98%" value="<?php echo $inTetraMnc;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>Init_Pei</s></td>
+        <td style="border: none;">Init_Pei</td>
         <td style="border: none;"><input type="text" name="inTetraInitPei" style="width:98%" value="<?php echo $inTetraInitPei;?>">
         </td></tr>
         <tr style="border: none;"> 

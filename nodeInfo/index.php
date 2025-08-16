@@ -241,7 +241,7 @@ if (isset($_POST['btnSave']))
         <input type="text" name="inLocation" style="width:98%" value="<?php echo $inLocation;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>Node Location</s></td>
+        <td style="border: none;">Node Location</td>
         <td style="border: none;">
         <input  type="text" name="innodeLocation" style="width:98%" value="<?php echo $innodeLocation;?>">
         </td></tr>
@@ -256,7 +256,7 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inSysOp" style="width:98%" value="<?php echo $inSysOp;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>Sysop</s></td>
+        <td style="border: none;">Sysop</td>
         <td style="border: none;">
         <input  type="text" name="inSysop" style="width:98%" value="<?php echo $inSysop;?>">
         </td></tr>
@@ -267,7 +267,7 @@ if (isset($_POST['btnSave']))
         </td></tr>
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>LAT</s></td>
+        <td style="border: none;">LAT</td>
         <td style="border: none;">
         <input  type="text" name="inLAT" style="width:98%" value="<?php echo $inLAT;?>">
         </td></tr>
@@ -277,7 +277,7 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inLong" style="width:98%" value="<?php echo $inLong;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>LONG</s></td>
+        <td style="border: none;">LONG</td>
         <td style="border: none;">
         <input  type="text" name="inLONG" style="width:98%" value="<?php echo $inLONG;?>">
         </td></tr>
@@ -287,7 +287,7 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inRxFreq" style="width:98%" value="<?php echo $inRxFreq;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>RXFREQ</s></td>
+        <td style="border: none;">RXFREQ</td>
         <td style="border: none;">
         <input  type="text" name="inRXFREQ" style="width:98%" value="<?php echo $inRXFREQ;?>">
         </td></tr>
@@ -297,7 +297,7 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inTxFreq" style="width:98%" value="<?php echo $inTxFreq;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>TXFREQ</s></td>
+        <td style="border: none;">TXFREQ</td>
         <td style="border: none;">
         <input  type="text" name="inTXFREQ" style="width:98%" value="<?php echo $inTXFREQ;?>">
         </td></tr>
@@ -327,7 +327,7 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inLinkedTo" style="width:98%" value="<?php echo $inLinkedTo;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>Verbund</s></td>
+        <td style="border: none;">Verbund</td>
         <td style="border: none;">
         <input  type="text" name="inVerbund" style="width:98%" value="<?php echo $inVerbund;?>">
         </td></tr>
@@ -337,7 +337,7 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inCtcss" style="width:98%" value="<?php echo $inCtcss;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>CTCSS</s></td>
+        <td style="border: none;">CTCSS</td>
         <td style="border: none;">
         <input  type="text" name="inCTCSS" style="width:98%" value="<?php echo $inCTCSS;?>">
         </td></tr>
@@ -347,7 +347,7 @@ if (isset($_POST['btnSave']))
         <input  type="text" name="inDefaultTg" style="width:98%" value="<?php echo $inDefaultTg;?>">
         </td></tr>
         <tr style="border: none;"> 
-        <td style="border: none;"><s>DefaultTG</s></td>
+        <td style="border: none;">DefaultTG</td>
         <td style="border: none;">
         <input  type="text" name="inDefaultTG" style="width:98%" value="<?php echo $inDefaultTG;?>">
         </td></tr>
